@@ -9,6 +9,7 @@ import Navigate from "./components/navigate/Navigate";
 import ProductDetails from "./components/products/ProductDetails";
 import Produts from "./components/products/ProdutsList";
 import Users from "./components/users/Users";
+import Login from "./components/auth/LoginForm";
 
 function App() {
   return (
@@ -22,6 +23,7 @@ function App() {
         <Route path="/products/:id" element={<ProductDetails />} />
         <Route path="/products" element={<Produts />} />
         <Route path="/acerca" element={<About />} />
+        <Route path="/login" element={<Login />} />
         <Route path="*" element={<Error404 />} />
       </Routes>
     </>

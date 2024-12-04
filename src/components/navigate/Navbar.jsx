@@ -14,6 +14,7 @@ function Menu() {
       {/* <NavLink to="/detalle">Detalle</NavLink> */}
       <NavLink to="/products">Products</NavLink>
       <NavLink to="/users">Users</NavLink>
+      <NavLink to="/login">Log In</NavLink>
     </nav>
   );
 }
