@@ -1,3 +1,11 @@
+import Button from "@mui/material/Button";
+import Card from "@mui/material/Card";
+import CardActions from "@mui/material/CardActions";
+import CardContent from "@mui/material/CardContent";
+import CardHeader from "@mui/material/CardHeader";
+import Container from "@mui/material/Container";
+import Stack from "@mui/material/Stack";
+import TextField from "@mui/material/TextField";
 import axios from "axios";
 import { useState } from "react";
 
@@ -28,17 +36,37 @@ const Login = () => {
   };
 
   return (
-    <div>
-      <h3>Iniciar Sesión</h3>
-      <input name="email" placeholder="Email" onChange={handleChange} />
-      <input
-        name="password"
-        type="password"
-        placeholder="Contraseña"
-        onChange={handleChange}
-      />
-      <button onClick={handleLogin}>Iniciar Sesión</button>
-    </div>
+    <>
+      <Card>
+        <CardHeader title="Login" />
+        <CardContent>
+          <Stack direction="column" spacing={2}>
+            <TextField
+              label="E-mail"
+              variant="outlined"
+              placeholder="tu@email.com"
+              onChange={handleChange}
+              name="email"
+            />
+            <TextField
+              label="Password"
+              variant="outlined"
+              placeholder="••••••"
+              onChange={handleChange}
+              name="password"
+              type="password"
+            />
+          </Stack>
+        </CardContent>
+        <CardActions>
+          <Container>
+            <Button variant="contained" onClick={handleLogin}>
+              Iniciar Sesión
+            </Button>
+          </Container>
+        </CardActions>
+      </Card>
+    </>
   );
 };
 
