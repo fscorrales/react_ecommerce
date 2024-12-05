@@ -37,7 +37,7 @@ const Login = () => {
 
   return (
     <>
-      <Card>
+      <Card sx={{ maxWidth: 345, margin: "auto", marginTop: 8 }}>
         <CardHeader title="Login" />
         <CardContent>
           <Stack direction="column" spacing={2}>
